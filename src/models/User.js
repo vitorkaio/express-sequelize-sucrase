@@ -11,6 +11,11 @@ class User extends Model {
       sequelize
     })
   }
+
+  // Usuário tem vários endereços
+  static associate (models) {
+    this.hasMany(models.Address, { foreignKey: 'user_id', as: 'addresses' })
+  }
 }
 
 export default User
