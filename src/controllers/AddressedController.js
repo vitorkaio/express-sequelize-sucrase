@@ -14,7 +14,7 @@ export const getAddress = async (req, res) => {
 
     // const address = await Address.findAll({ where: { user_id: userId } })
 
-    return res.json(user)
+    return res.json(user.addresses)
   } catch (error) {
     return res.status(500).json(error)
   }
